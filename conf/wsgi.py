@@ -11,6 +11,12 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'conf.settings')
+from dotenv import load_dotenv
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'conf.settings.prod')
+
+# 서버 운영 환경
+project_folder = os.path.expanduser('/home/ubuntu/projects/pybo_bulletin_board')
+load_dotenv(os.path.join(project_folder, '.env'))
 
 application = get_wsgi_application()
