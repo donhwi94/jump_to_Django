@@ -2,7 +2,4 @@
 
 Ngnix - gunicorn - postgreSQL 
 
-## 기능리스트
-1. 로그인/로그아웃
-
 (추가 업데이트 예정)
